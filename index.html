@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="loader">
+  <div class="heart-loader">💖</div>
+  <p>Loading love...</p>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">🎵</button>
+
+<div class="hearts-bg"></div>
+
+<div class="container">
+
+<!-- SLIDE 1 -->
+<section class="slide active" id="slide1">
+  <h2>Enter the secret code 💗</h2>
+  <p class="hint">Hint: Our anniversary date 💕 (04/07)</p>
+  <input type="password" id="pinDisplay" disabled>
+
+  <div class="keypad">
+    <button onclick="pressKey(1)">1</button>
+    <button onclick="pressKey(2)">2</button>
+    <button onclick="pressKey(3)">3</button>
+    <button onclick="pressKey(4)">4</button>
+    <button onclick="pressKey(5)">5</button>
+    <button onclick="pressKey(6)">6</button>
+    <button onclick="pressKey(7)">7</button>
+    <button onclick="pressKey(8)">8</button>
+    <button onclick="pressKey(9)">9</button>
+    <button onclick="clearPin()">❌</button>
+    <button onclick="pressKey(0)">0</button>
+    <button onclick="checkPin()">✔</button>
+  </div>
+
+  <p id="pinMessage"></p>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide" id="slide2">
+  <h2>Tap the bouquet 💐</h2>
+  <img src="bouquet.png" class="bouquet" onclick="showMessage()">
+
+  <div class="message-box" id="messageBox">
+    <p>
+Happy Valentine’s Day, bby 💗<br><br>
+
+mahal na mahal kita. I love you so much… and yes bby, sound immature man pakinggan pero I love you more than myself. kasi every time na nag-a-argue tayo or may tampuhan, mas nasasaktan ako knowing na nasasaktan kita. hindi ko kaya yung thought na ako yung dahilan ng luha o lungkot mo.<br><br>
+
+I’m very, very sorry from the bottom of my heart. Alam ko minsan baka naiirita ka na sa lagi kong “sorry,” pero please bby… kahit 40% lang muna ng sorry ko, tanggapin mo 🥹 kasi lahat ng sorry ko, totoo at galing sa puso.<br><br>
+
+sorry din bby kasi hindi kita ma-treat this Valentine’s. actually buong araw ako anxious huhu, nakikita ko ibang lalaki may dalang flowers para sa gf or wife nila… tapos eto ako, hindi alam paano bibili para sayo. please wag na wag mo pong iisipin na hindi kita mahal, sa ganda at pagiging thoughtful mo, you deserve the biggest bouquet ever made. 🌹<br><br>
+
+pero eto lang muna kaya kong i-offer ngayon, puso ko, loyalty ko, at this link na may heartful message 🥹 I hope that’s enough for now. but it well never be ever.<br><br>
+
+palagi mong tandaan, mahal na mahal kita. samahan mo ako bby hanggang magka-meron ako, at papanindigan ko lahat ng sinasabi ko sayo.<br><br>
+
+Mahal na mahal kita. Walang bagay ang makakabawas non kahit masungit ka minsan, tampuhin, hindi mabasa, or unpredictable… mahal na mahal na mahal kita.<br><br>
+
+magtiwala ka lang sakin bby. kahit hindi man ako nakakapagsimba every Sunday at hindi pa ganon kalapit kay God ngayon, palagi kitang hinihiling sa Kanya. lagi kitang ipinagdadasal.<br><br>
+
+And sayo lang tong Ken mo. makakasama mo palagi sa hirap at ginhawa. 🤍<br><br>
+
+stay who you are, bby. I’m proud of you. good luck sa journey mo… at sa journey natin. I need you, Myel.<br><br>
+
+I LOVE YOUUUU SO MUCH. 💞
+    </p>
+  </div>
+
+  <button onclick="nextSlide()">Next ➡</button>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide" id="slide3">
+  <h2>Our Memories 📸</h2>
+  <div class="polaroids">
+    <div class="polaroid" onclick="reveal(this)">
+      <img src="photo1.jpg">
+      <p>Our first memory 💕</p>
+      <span>I love this day 💖</span>
+    </div>
+    <div class="polaroid" onclick="reveal(this)">
+      <img src="photo2.jpg">
+      <p>Your smile 😍</p>
+      <span>You are my happiness 💗</span>
+    </div>
+    <div class="polaroid" onclick="reveal(this)">
+      <img src="photo3.jpg">
+      <p>Forever ❤️</p>
+      <span>Always us 💞</span>
+    </div>
+  </div>
+  <button onclick="prevSlide()">⬅ Back</button>
+  <button onclick="nextSlide()">Next ➡</button>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide" id="slide4">
+  <h2>Tap the ring 💍</h2>
+  <div class="ring" onclick="showFinal()">💍</div>
+  <p id="finalMessage"></p>
+  <button onclick="prevSlide()">⬅ Back</button>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
